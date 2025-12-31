@@ -1,0 +1,174 @@
+# AUDIT READY — Post-Mortem Template
+
+## Purpose
+
+This document defines the post-mortem process used within the Human SIEM
+operating model.
+
+Post-mortems exist to extract learning,
+not to assign blame.
+
+They convert incidents into institutional memory.
+
+---
+
+## When a Post-Mortem Is Required
+
+A post-mortem is conducted when:
+
+* an incident is confirmed
+* escalation to leadership occurred
+* controls failed or were bypassed
+* assumptions proved incorrect
+* institutional risk was present
+
+Severity does not determine necessity.
+Impact and learning value do.
+
+---
+
+## Post-Mortem Principles
+
+All post-mortems must be:
+
+* factual
+* neutral in tone
+* focused on decisions and systems
+* oriented toward improvement
+
+Blame reduces learning.
+Silence preserves risk.
+
+---
+
+## Structure of the Post-Mortem
+
+### 1. Incident Summary
+
+A concise description including:
+
+* what happened
+* when it happened
+* how it was detected
+* current status
+
+No speculation.
+Only verified facts.
+
+---
+
+### 2. Timeline of Key Decisions
+
+List significant decisions in order:
+
+* detection
+* triage
+* escalation
+* containment
+* resolution
+
+Focus on decisions, not events.
+
+---
+
+### 3. What Worked
+
+Identify:
+
+* controls that functioned correctly
+* decisions that reduced impact
+* processes that supported response
+
+Successes must be documented
+to avoid accidental regression.
+
+---
+
+### 4. What Failed
+
+Identify:
+
+* control gaps
+* flawed assumptions
+* delayed or missed decisions
+* process weaknesses
+
+Failures are described without attribution.
+
+---
+
+### 5. Root Cause Analysis
+
+Root causes focus on:
+
+* system design
+* governance gaps
+* visibility limitations
+* decision logic
+
+Human error is a symptom,
+not a root cause.
+
+---
+
+### 6. Risk Reassessment
+
+Evaluate:
+
+* whether risk posture assumptions held
+* if tolerance levels remain valid
+* if escalation thresholds require adjustment
+
+Risk posture may change post-incident.
+
+---
+
+### 7. Action Items
+
+Define concrete actions:
+
+* what will change
+* who owns it
+* expected outcome
+* review date
+
+Actions must be realistic and measurable.
+
+---
+
+### 8. Lessons Learned
+
+Summarize:
+
+* what the organization knows now
+* what will be done differently
+* what should never happen again
+
+Lessons must be transferable.
+
+---
+
+## Post-Mortem Review and Closure
+
+Post-mortems are reviewed by:
+
+* security leadership
+* relevant stakeholders
+
+Closure occurs when:
+
+* actions are assigned
+* learning is documented
+* follow-up is scheduled
+
+Unclosed post-mortems represent residual risk.
+
+---
+
+## Final Statement
+
+Incidents are inevitable.
+Repeated mistakes are not.
+
+This template exists to ensure that every incident
+strengthens the organization instead of weakening it.
