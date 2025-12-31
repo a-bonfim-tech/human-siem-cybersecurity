@@ -52,5 +52,6 @@ All examples are abstracted, synthetic, and compliance-safe.
 
 ---
 
+This repository operates under explicit governance principles defined in GOVERNANCE.md.
 Author: André Luiz Vieira Bonfim  
 Focus: Cloud Security, SIEM, Governance, Identity, Zero Trust
