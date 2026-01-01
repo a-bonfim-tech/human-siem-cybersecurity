@@ -111,6 +111,47 @@ Escalation occurs when:
 
 Escalation shifts accountability beyond the security function.
 
+## Escalation Boundary (Explicit)
+
+This runbook does **not** authorize implicit escalation.
+
+All human action is gated by the **Human SIEM escalation boundary**, defined in:
+
+* `soc-alignment/escalation-boundary.md`
+* `RISK-POSTURE.md`
+* `audit-ready/decision-log-example.md`
+
+### Escalation Decision Gate
+
+Before any escalation or handoff, the operator must verify:
+
+At least **one** of the following conditions is met:
+
+* **Impact threshold**: credible risk to confidentiality, integrity, or availability with material consequence.
+* **Confidence threshold**: multi-signal correlation reduces uncertainty.
+* **Time sensitivity**: delay significantly increases expected harm.
+* **Policy trigger**: explicit governance or regulatory requirement.
+* **Blast radius**: scope crosses identity, admin, or organizational boundary.
+
+If **none** of the above conditions are met:
+
+* Default action is **document-only** or **validate**, not escalate.
+* Silence-by-design applies.
+
+### Documentation Requirement
+
+Every escalation or deliberate non-escalation must result in a **decision log entry** under:
+
+```
+audit-ready/
+```
+
+Escalation without documentation is considered a **process violation**.
+
+---
+
+This section defines **where escalation is triggered**, **who is authorized**, and **how the decision remains defensible over time**.
+
 ---
 
 ## False Positives and Silence
