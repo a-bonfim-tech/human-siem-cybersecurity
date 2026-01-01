@@ -1,117 +1,79 @@
-# SECURITY ARCHITECTURE SNAPSHOT — Human SIEM
+# Security Architecture Snapshot
 
-## What this is
+## What is this?
 
-This document provides a **one-page snapshot** of the Human SIEM security architecture.
+This repository represents a **Human-Centered SIEM and Security Governance Architecture**.
 
-It exists for **rapid evaluation** by:
-
-* recruiters,
-* security leaders,
-* auditors,
-* technical interviewers.
-
-It answers a single question:
-
-> *What kind of security system is this — and what kind of professional designed it?*
+It models **how security decisions are made**, not just how alerts are generated.
 
 ---
 
-## Architectural Positioning
+## Why it exists
 
-**Human SIEM is not a tool-centric architecture.**
-It is a **decision-centric security operating model**.
+Most security portfolios show **tools**.
+This one shows **thinking**.
 
-The architecture prioritizes:
+The objective is to demonstrate the ability to:
 
-* judgment over volume,
-* governance over configuration,
-* accountability over automation.
-
----
-
-## Core Architectural Choices
-
-### 1. Identity as the Control Plane
-
-Identity (IAM) is treated as the primary trust boundary.
-
-Security decisions originate from:
-
-* authentication context,
-* authorization intent,
-* privilege changes.
-
-This reflects modern cloud and SaaS threat reality.
+* reason about risk
+* define escalation boundaries
+* document decisions for audit and leadership
+* balance security, business, and compliance constraints
 
 ---
 
-### 2. Silence by Design
+## What problem it solves
 
-Alerts are not the default output.
+Organizations fail audits and incident response not because of missing tools, but because:
 
-Silence is intentional and documented.
-Escalation occurs only when:
+* decisions are undocumented
+* rationale is lost over time
+* escalation criteria are implicit
+* accountability is unclear
 
-* risk becomes institutional,
-* accountability shifts beyond security teams.
+This architecture exists to make decisions:
 
----
-
-### 3. Decision-to-Evidence Pipeline
-
-Every meaningful security decision produces:
-
-* documented rationale,
-* explicit risk posture,
-* validation logic,
-* audit-ready evidence.
-
-Tools support this pipeline — they do not define it.
+* explicit
+* reviewable
+* defensible months later
 
 ---
 
-### 4. Explicit Governance Boundaries
+## What kind of professional builds this?
 
-The architecture encodes:
+Someone who:
 
-* who can decide,
-* when escalation is mandatory,
-* where responsibility transfers.
-
-This prevents silent institutional risk.
-
----
-
-## What This Architecture Avoids (By Design)
-
-* Tool-specific lock-in
-* Raw log accumulation without hypothesis
-* Alert-driven chaos
-* Undocumented tribal knowledge
-
-These are architectural anti-patterns, not omissions.
+* understands that **risk is a management decision**
+* designs security for **audit and leadership visibility**
+* values **silence by design** over alert volume
+* treats documentation as a security control
 
 ---
 
-## How to Evaluate This Repository Quickly
+## What this is NOT
 
-1. Read `ARCHITECTURE-DECISIONS.md`
-2. Review one decision in `audit-mapping/`
-3. Inspect validation logic in `validation/`
-4. Check escalation boundaries in `RISK-POSTURE.md`
+* Not a SOC tool
+* Not a SIEM product
+* Not production infrastructure
 
-If the reasoning holds, the architecture holds.
+All content is synthetic, abstracted, and compliance-safe.
 
 ---
 
-## Final Signal
+## How to evaluate this repository (5 minutes)
 
-This architecture was designed by someone who:
+1. Read **START_HERE.md**
+2. Skim **ARCHITECTURE-DECISIONS.md**
+3. Look at one file in **audit-mapping/**
+4. Observe how decisions are justified, not just stated
 
-* expects audits,
-* respects human attention,
-* understands institutional risk,
-* treats ethics as a constraint, not a slogan.
+If the reasoning is clear, the system works.
 
-This is intentional.
+---
+
+## Summary (for non-technical readers)
+
+This repository demonstrates **how mature cybersecurity organizations think**.
+
+It is evidence of **judgment, structure, and accountability** — not tooling.
+
