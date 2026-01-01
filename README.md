@@ -1,3 +1,6 @@
+> **Start here:** read **START_HERE.md** for the 10–15 minute guided tour and evaluation path.
+
+
 # Human SIEM — Cybersecurity Operating System
 
 This repository documents a governance-driven cybersecurity operating system
