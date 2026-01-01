@@ -2,12 +2,11 @@
 
 # Human SIEM — Cybersecurity Operating System
 
-This repository documents a governance-driven cybersecurity operating system
-designed to model how a senior security professional thinks, decides, and
-documents risk.
+This repository documents a **governance-driven cybersecurity operating system**
+designed to model how a senior security professional **thinks, decides, and documents risk**.
 
 It is not a collection of tools.
-It is a collection of judgment.
+It is a collection of **judgment**.
 
 ---
 
@@ -32,7 +31,7 @@ Choose the path that matches **your role**:
 ### 👀 Recruiter / HR / Initial Screening
 
 👉 **[SECURITY-ARCHITECTURE-SNAPSHOT.md](./SECURITY-ARCHITECTURE-SNAPSHOT.md)**
-*A one-page overview explaining what kind of security system this is — and what kind of professional designed it.*
+*A one-page explanation of what kind of security system this is — and what kind of professional built it.*
 
 ---
 
@@ -50,16 +49,16 @@ It provides a **replicable, audit-ready framework** for modeling how security de
 
 ---
 
-### 15-Minute Evaluation Path (for reviewers)
+## 15-Minute Evaluation Path (for reviewers)
 
-1. Read **[START_HERE.md](./START_HERE.md)**
-2. Read **[SECURITY-ARCHITECTURE-SNAPSHOT.md](./SECURITY-ARCHITECTURE-SNAPSHOT.md)**
-3. Review **[ARCHITECTURE-DECISIONS.md](./ARCHITECTURE-DECISIONS.md)**
+1. Read **START_HERE.md**
+2. Read **SECURITY-ARCHITECTURE-SNAPSHOT.md**
+3. Review **ARCHITECTURE-DECISIONS.md**
 4. Read the end-to-end example:
-   **[examples/decision-end-to-end.md](./examples/decision-end-to-end.md)**
-5. Review one decision in `audit-mapping/`
-6. Inspect validation logic in `validation/`
-7. Check governance constraints in **[GOVERNANCE.md](./GOVERNANCE.md)**
+   **examples/decision-end-to-end.md**
+5. Review one decision in **audit-mapping/**
+6. Inspect validation logic in **validation/**
+7. Check governance constraints in **GOVERNANCE.md**
 
 This is not a toolset.
 It is a **governance operating model**.
@@ -83,6 +82,8 @@ To demonstrate how cybersecurity excellence is achieved through:
 * A transferable operating model aligned with SOC, Audit, and Leadership
 * A documentation-first approach to trust and governance
 
+---
+
 ## What this repository is NOT
 
 * No real logs
@@ -105,10 +106,10 @@ All examples are abstracted, synthetic, and compliance-safe.
 
 ## Structure
 
-* `runbooks/` — enterprise-style operational logic
-* `detection-strategy/` — hypothesis and correlation models
-* `soc-alignment/` — triage and escalation reasoning
-* `audit-ready/` — documentation templates for compliance
+* **runbooks/** — enterprise-style operational logic
+* **detection-strategy/** — hypothesis and correlation models
+* **soc-alignment/** — triage and escalation reasoning
+* **audit-ready/** — documentation templates for compliance
 
 ---
 
@@ -121,6 +122,8 @@ All examples are abstracted, synthetic, and compliance-safe.
 ---
 
 **Current roadmap:** v0.2.0 — Cloud Audit & Adversarial Validation
-This repository operates under explicit governance principles defined in **[GOVERNANCE.md](./GOVERNANCE.md)**.
+This repository operates under explicit governance principles defined in **GOVERNANCE.md**.
+
 **Maintainer / Original Author:** André Luiz Vieira Bonfim
 **Focus:** Cloud Security, SIEM, Governance, Identity, Zero Trust
+
