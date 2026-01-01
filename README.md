@@ -10,6 +10,30 @@ documents risk.
 It is not a collection of tools.
 It is a collection of judgment.
 
+## Use This Repository as a Template
+
+This repository is designed to be **forked as a template**, not studied as a static document.
+
+It provides a **replicable, audit-ready framework** for modeling how security decisions are made, validated, and defended under scrutiny.
+
+### Intended Use
+
+* Clone via **“Use this template”**
+* Adapt scope (cloud, on-prem, hybrid)
+* Produce **defensible decision evidence**, not detections
+
+### 15-Minute Evaluation Path (for reviewers)
+
+1. Read `START_HERE.md`
+2. Review one decision in `audit-mapping/`
+3. Inspect validation logic in `validation/`
+4. Check governance constraints in `GOVERNANCE.md`
+
+If a decision cannot be explained, validated, and defended **six months later**, it does not belong in this framework.
+
+This is not a toolset.
+It is a **governance operating model**.
+
 ## Purpose
 
 To demonstrate how cybersecurity excellence is achieved through:
