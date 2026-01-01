@@ -9,6 +9,8 @@ documents risk.
 
 It is not a collection of tools.
 It is a collection of judgment.
+> **If you only read one thing:**  
+> 👉 **[examples/decision-end-to-end.md](./examples/decision-end-to-end.md)** — a complete, end-to-end example of how security decisions are reasoned, validated, governed, and made audit-ready.
 
 ## Use This Repository as a Template
 
@@ -24,12 +26,16 @@ It provides a **replicable, audit-ready framework** for modeling how security de
 
 ### 15-Minute Evaluation Path (for reviewers)
 
-1. Read `START_HERE.md`
-2. Review one decision in `audit-mapping/`
-3. Inspect validation logic in `validation/`
-4. Check governance constraints in `GOVERNANCE.md`
+1. Read **[START_HERE.md](./START_HERE.md)**
 
-If a decision cannot be explained, validated, and defended **six months later**, it does not belong in this framework.
+2. Read the end-to-end example:  
+   **[examples/decision-end-to-end.md](./examples/decision-end-to-end.md)**
+
+3. Review one decision in `audit-mapping/`
+
+4. Inspect validation logic in `validation/`
+
+5. Check governance constraints in **[GOVERNANCE.md](./GOVERNANCE.md)**
 
 This is not a toolset.
 It is a **governance operating model**.
