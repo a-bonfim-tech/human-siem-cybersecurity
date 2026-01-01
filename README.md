@@ -54,7 +54,7 @@ All examples are abstracted, synthetic, and compliance-safe.
 - Risk, Audit, and Compliance stakeholders
 
 ---
-
+Current roadmap: v0.2.0 — Cloud Audit & Adversarial Validation
 This repository operates under explicit governance principles defined in GOVERNANCE.md.
 Author: André Luiz Vieira Bonfim  
 Focus: Cloud Security, SIEM, Governance, Identity, Zero Trust
