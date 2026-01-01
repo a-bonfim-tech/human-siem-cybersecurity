@@ -2,11 +2,11 @@
 
 ## Purpose
 
-This document explains **why this security architecture exists**,
-which decisions were made, and which alternatives were **explicitly rejected**.
+This document explains why this security architecture exists,
+which decisions were made, and which alternatives were explicitly rejected.
 
 Architecture is not what is built.
-Architecture is what is **chosen — and what is refused**.
+Architecture is what is chosen — and what is refused.
 
 ---
 
@@ -18,8 +18,7 @@ Architecture is what is **chosen — and what is refused**.
 **Rationale:**
 Tools change. Decisions persist.
 
-Without documented reasoning, security actions cannot be defended during audits,
-incidents, or leadership reviews.
+Without documented reasoning, security actions cannot be defended during audits, incidents, or leadership reviews.
 
 ---
 
@@ -84,8 +83,9 @@ The result is an operating model where:
 
 ## Final Note
 
-This architecture optimizes for **trust, clarity, and accountability**.
+This architecture optimizes for trust, clarity, and accountability.
 
 It assumes that the most expensive failure is not a missed alert,
 but an **undefensible decision**.
+
 
