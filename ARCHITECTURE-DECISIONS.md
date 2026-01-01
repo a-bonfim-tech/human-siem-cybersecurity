@@ -1,224 +1,91 @@
-# ARCHITECTURE DECISIONS — Human SIEM Cybersecurity Operating System
+# Architecture Decisions — Human SIEM
 
-## Why this document exists
+## Purpose
 
-This document captures **architecture-level security decisions** made in the Human SIEM operating model.
+This document explains **why this security architecture exists**,
+which decisions were made, and which alternatives were **explicitly rejected**.
 
-It answers one question clearly:
-
-> *Why was this designed this way — and would the decision still hold under audit, incident, or leadership scrutiny?*
-
-This is **not** a technical spec.
-This is **decision evidence**.
+Architecture is not what is built.
+Architecture is what is **chosen — and what is refused**.
 
 ---
 
-## What counts as an Architecture Decision here
+## Decision 1: Governance before tooling
 
-An architecture decision is recorded when it:
+**Chosen:** Documentation-first security governance
+**Rejected:** Tool-first SIEM implementation
 
-* Shapes **security posture**, not just implementation
-* Introduces or constrains **risk**
-* Affects **detection, response, identity, or governance boundaries**
-* Would be questioned **months later** by audit, SOC, or leadership
+**Rationale:**
+Tools change. Decisions persist.
 
-If a decision cannot be defended without tribal knowledge, it belongs here.
-
----
-
-## Decision Format (Standardized)
-
-Each decision follows this structure:
-
-1. **Context**
-2. **Decision**
-3. **Rationale**
-4. **Alternatives Considered**
-5. **Risk Trade-offs**
-6. **Validation & Evidence**
-7. **Status & Review**
-
-This mirrors how real-world security architecture is evaluated.
+Without documented reasoning, security actions cannot be defended during audits,
+incidents, or leadership reviews.
 
 ---
 
-## AD-001 — Identity as the Primary Control Plane
+## Decision 2: Silence as a security control
 
-### Context
+**Chosen:** Silence-by-design detection philosophy
+**Rejected:** Alert volume as a proxy for security
 
-Traditional SIEM architectures prioritize logs and network telemetry.
-Cloud and SaaS environments shift the real control boundary to **identity and authorization**.
+**Rationale:**
+Excessive alerts dilute attention and accountability.
 
-### Decision
-
-Treat **identity (IAM)** as the primary security control plane across detection, validation, and escalation.
-
-### Rationale
-
-* Most high-impact incidents involve identity misuse, not perimeter failure
-* Identity events are semantically rich and audit-relevant
-* IAM decisions map cleanly to governance and accountability
-
-### Alternatives Considered
-
-* Network-centric detection
-* Tool-centric SIEM correlation
-
-Rejected due to poor signal quality and weak audit defensibility.
-
-### Risk Trade-offs
-
-* Reduced visibility into low-level network anomalies
-* Strong dependency on IAM telemetry quality
-
-### Validation & Evidence
-
-* Adversarial validation scenarios in `validation/`
-* Escalation logic aligned with `soc-alignment/`
-
-### Status
-
-Accepted
-Review cycle: Annual or upon major IAM model change
+Silence is acceptable when risk is understood, documented, and monitored.
 
 ---
 
-## AD-002 — Silence by Design over Alert Exhaustion
+## Decision 3: Identity as the primary control plane
 
-### Context
+**Chosen:** Identity-centric detection and escalation
+**Rejected:** Network-only or perimeter-centric models
 
-Alert fatigue degrades security outcomes and decision quality.
+**Rationale:**
+Modern environments are cloud-native and identity-driven.
 
-### Decision
-
-Design detection logic to **optimize for silence**, not volume.
-
-### Rationale
-
-* Silence is a *decision*, not a failure
-* Escalation must signal **decision points**, not raw events
-* Human attention is a finite security resource
-
-### Alternatives Considered
-
-* Exhaustive alerting with downstream triage
-* Tool-default alert thresholds
-
-Rejected due to operational entropy and weak signal-to-noise ratio.
-
-### Risk Trade-offs
-
-* Risk of delayed detection for low-confidence scenarios
-* Requires disciplined validation and documentation
-
-### Validation & Evidence
-
-* Detection principles in `ALERT-PHILOSOPHY.md`
-* Correlation strategy in `strategy/`
-
-### Status
-
-Accepted
-Continuously evaluated via adversarial validation
+Identity events provide the highest signal-to-noise ratio for institutional risk.
 
 ---
 
-## AD-003 — Decision-to-Evidence over Tool Configuration
+## Decision 4: Explicit escalation boundaries
 
-### Context
+**Chosen:** Documented escalation criteria
+**Rejected:** Ad-hoc human judgment during incidents
 
-Security tooling changes frequently. Decisions must outlive tools.
+**Rationale:**
+When escalation criteria are implicit, responsibility becomes unclear.
 
-### Decision
-
-Document **security decisions**, not tool configurations, as the primary artifact.
-
-### Rationale
-
-* Tools are replaceable; reasoning is not
-* Audits assess decisions, not dashboards
-* Enables portability across environments
-
-### Alternatives Considered
-
-* Tool-specific documentation
-* Detection-rule repositories
-
-Rejected due to fragility and vendor lock-in.
-
-### Risk Trade-offs
-
-* Higher upfront documentation effort
-* Requires architectural discipline
-
-### Validation & Evidence
-
-* `audit-ready/` decision logs
-* End-to-end example in `examples/decision-end-to-end.md`
-
-### Status
-
-Accepted
-Non-negotiable design principle
+Explicit boundaries protect both the organization and the security team.
 
 ---
 
-## AD-004 — Explicit Escalation Boundaries
+## Decision 5: Audit-ready by default
 
-### Context
+**Chosen:** Decisions mapped to evidence and rationale
+**Rejected:** Retroactive documentation after incidents
 
-Ambiguous escalation creates institutional risk.
+**Rationale:**
+If a decision cannot be explained six months later, it was never complete.
 
-### Decision
-
-Define **explicit escalation boundaries** between SOC, Security, and Leadership.
-
-### Rationale
-
-* Not all risk is technical risk
-* Institutional risk requires executive awareness
-* Escalation is a governance act
-
-### Alternatives Considered
-
-* Implicit escalation via severity levels
-* Case-by-case judgment
-
-Rejected due to inconsistency and audit exposure.
-
-### Risk Trade-offs
-
-* Potential over-escalation in edge cases
-* Requires clear risk posture alignment
-
-### Validation & Evidence
-
-* Escalation criteria in `RISK-POSTURE.md`
-* SOC alignment in `soc-alignment/`
-
-### Status
-
-Accepted
-Reviewed alongside risk posture updates
+Audit readiness is a design requirement, not an afterthought.
 
 ---
 
-## How this document is used by reviewers
+## Architectural Outcome
 
-Recruiters, auditors, and senior engineers should be able to:
+The result is an operating model where:
 
-* Read **one decision**
-* Understand **why it exists**
-* See **where it is validated**
-* Challenge it — and find an answer
-
-If that fails, the architecture has failed.
+* security actions are traceable
+* risk ownership is clear
+* leadership decisions are supported by evidence
+* compliance is a natural by-product
 
 ---
 
-## Final Statement
+## Final Note
 
-> *Good architecture is not about being clever.*
-> *It is about being defensible when challenged.*
+This architecture optimizes for **trust, clarity, and accountability**.
 
-This document exists to make that defense explicit.
+It assumes that the most expensive failure is not a missed alert,
+but an **undefensible decision**.
+
