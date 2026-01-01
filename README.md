@@ -1,4 +1,4 @@
-> **Start here:** read **START_HERE.md** for the 10–15 minute guided tour and evaluation path.
+> **Start here:** read **[START_HERE.md](./START_HERE.md)** for the 10–15 minute guided tour and evaluation path.
 
 
 # Human SIEM — Cybersecurity Operating System
