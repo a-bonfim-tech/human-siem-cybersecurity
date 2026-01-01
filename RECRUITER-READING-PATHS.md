@@ -1,71 +1,91 @@
-# RECRUITER READING PATHS — Human SIEM
+# Recruiter & Hiring Manager Reading Paths
 
-This repository supports **three distinct evaluation paths**.
+This document provides fast, role-appropriate entry points into the Human SIEM repository
+for non-technical or semi-technical reviewers.
 
-Choose the one that matches your role.
-
----
-
-## Path A — Technical Security (Engineer / Architect / IAM / Detection)
-
-**Goal:** Evaluate technical judgment and architectural reasoning.
-
-Recommended order:
-
-1. `START_HERE.md`
-2. `ARCHITECTURE-DECISIONS.md`
-3. `examples/decision-end-to-end.md`
-4. `audit-mapping/`
-5. `validation/`
-
-What to look for:
-
-* trade-offs,
-* rejected alternatives,
-* defensibility of decisions.
+The goal is **signal, not depth**.
 
 ---
 
-## Path B — Security Leadership (CISO / Head of Security / Manager)
+## What this repository demonstrates
 
-**Goal:** Assess governance maturity and risk ownership.
+This is not a production system.
 
-Recommended order:
+It is a **portfolio of security reasoning**, showing how a senior security professional:
 
-1. `README.md`
-2. `ETHICS.md`
-3. `RISK-POSTURE.md`
-4. `GOVERNANCE.md`
-5. `ARCHITECTURE-DECISIONS.md`
-
-What to look for:
-
-* clarity of escalation,
-* accountability boundaries,
-* ethical constraints in decision-making.
+* defines risk posture
+* makes defensible decisions
+* documents accountability
+* aligns security with business and governance
 
 ---
 
-## Path C — Recruiter / HR / Initial Screening
+## 5-Minute Snapshot (Recommended)
 
-**Goal:** Determine seniority, clarity, and credibility.
+Read **SECURITY-ARCHITECTURE-SNAPSHOT.md**
 
-Recommended order:
+You will understand:
 
-1. `README.md`
-2. `SECURITY-ARCHITECTURE-SNAPSHOT.md`
-3. `examples/decision-end-to-end.md`
-4. `ETHICS.md`
-
-What to look for:
-
-* coherence,
-* absence of buzzwords,
-* explicit thinking.
+* what kind of security system this is
+* what problems it is designed to solve
+* what level of seniority it represents
 
 ---
 
-## Evaluation Hint
+## 10–15 Minute Structured Review
 
-If the reasoning is clear **without explanation from the author**,
-the system is doing its job.
+1. **SECURITY-ARCHITECTURE-SNAPSHOT.md**
+   High-level overview and intent
+
+2. **ARCHITECTURE-DECISIONS.md**
+   Why specific security choices were made
+
+3. **README.md**
+   Repository structure and evaluation path
+
+---
+
+## What to look for
+
+* Clear decision rationale
+* Explicit trade-offs
+* Governance awareness
+* Ability to explain decisions months later
+* Comfort saying “no”, “yes”, or “not now”
+
+---
+
+## What not to expect
+
+* No vendor tooling
+* No configuration files
+* No detections or rules
+* No operational metrics
+
+This repository evaluates **judgment**, not implementation speed.
+
+---
+
+## How to use this in hiring
+
+This repository is strong evidence for roles such as:
+
+* Security Architect
+* Detection Engineering Lead
+* Head of Security
+* Cloud Security Lead
+* Governance & Risk-focused Security Roles
+
+If a candidate can author and defend work like this,
+they can operate effectively at senior or principal levels.
+
+---
+
+## Final Note
+
+This repository exists to answer one question:
+
+**“Can this person be trusted to make irreversible security decisions?”**
+
+Everything here is designed to make that answer visible.
+
